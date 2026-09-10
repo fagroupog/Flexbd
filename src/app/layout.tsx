@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ui/theme";
 import Header from "@/components/ui/header";
+import Footer from "@/components/ui/footer";
 
 export const metadata: Metadata = {
   title: "Hotel Sikder Residential – হোটেল শিকদার আবাসিক",
@@ -20,8 +21,15 @@ export default function RootLayout({
   return (
     <html lang="en" dir="ltr">
       <body>
-        <ThemeProvider>{children}</ThemeProvider>
-        <Header />
+        <ThemeProvider>
+          <div className="flex min-h-screen flex-col">
+            <Header />
+            <main className="flex-1 pt-20">
+              {children}
+            </main>
+            <Footer />
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );
