@@ -121,7 +121,27 @@
   }
 }
 
-/* Hide Next.js error overlay portal */
-nextjs-portal {
-  display: none !important;
+/* Hotel-specific custom styles */
+.hotel-gradient {
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 50%, #0f766e 100%);
+}
+
+.gold-accent {
+  color: #d4a574;
+}
+
+.bg-gold-light {
+  background-color: #fef3c7;
+}
+
+.btn-primary {
+  @apply bg-blue-700 hover:bg-blue-800 text-white font-semibold py-3 px-8 rounded-lg shadow-md transition-colors;
+}
+
+.btn-gold {
+  @apply bg-amber-600 hover:bg-amber-700 text-white font-semibold py-3 px-8 rounded-lg shadow-md transition-colors;
+}
+
+.card-hover {
+  @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
 }
